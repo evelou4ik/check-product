@@ -13700,115 +13700,115 @@
         // const date = $("#date").val();
         // const orderNumber = $("#orderNumber").val();
 
-        // const vendor = "Viator";
-        // const url = "Viator/initial-first-step";
-        // const productId = "45557P135";
-        // const evendoSKU = "164266-571873";
-        // const date = "27-12-2023";
-        // const orderNumber = $("#orderNumber").val();
+        const vendor = "Viator";
+        const url = "Viator/initial-first-step";
+        const productId = "45557P135";
+        const evendoSKU = "164266-571873";
+        const date = "27-12-2023";
+        const orderNumber = $("#orderNumber").val();
 
-        // function formatDate(date) {
-        //   const day = date.getDate().toString().padStart(2, '0');
-        //   const month = (date.getMonth() + 1).toString().padStart(2, '0');
-        //   const year = date.getFullYear();
+        function formatDate(date) {
+          const day = date.getDate().toString().padStart(2, '0');
+          const month = (date.getMonth() + 1).toString().padStart(2, '0');
+          const year = date.getFullYear();
 
-        //   return `${day}-${month}-${year}`;
-        // }
-        // if (url == "Viator/initial-first-step") {
-        //   $.ajax({
-        //     url: `https://evendo.com/us/en/${url}`,
-        //     type: "GET",
-        //     // headers: {
-        //     //   "method": "GET",
-        //     //   // "Authorization": "Basic ZXZlbmRvOjc5eDc4eTMzMCE=",
-        //     //   "accept": "application/json",
-        //     //   "Access-Control-Allow-Origin":"*"
-        //     // },
-        //     data: {
-        //       vendor: vendor,
-        //       productId: productId,
-        //       date: date,
-        //       evendoSKU: evendoSKU,
-        //     },
-        //     dataType: "json",
-        //     success: function (response) {
-        //       // Handle the response date
-        //       //var responses = JSON.parse(response.html);
-        //       if (response.statusCode == 400) {
-        //         $("#agebandOpenModal").modal("show");
-        //         $("#msgNotAvailable").text(response.message);
-        //       } else {
-        //         console.log(5555)
-        //         $(".stepOne").html(response.html);
-        //         if (response.checkoutSummaryDate) {
-        //           $(".timeData").show();
-        //           $(".timeData").html(`<span class="icon-20 fill-color">
-        //                                  <img src="{{asset('assets/img/time.svg')}}" >
-        //                              </span>
-        //                              <h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${response.checkoutSummaryDate}</h6>`);
-        //         }
-        //         window.scrollTo(0, 0);
-        //       }
-        //     },
-        //     error: function (xhr) {
-        //       console.log(xhr);
-        //       // Handle any error that occurs during the AJAX request
-        //       // $("#agebandOpenModal").modal("show");
-        //     },
-        //   });
-        // } else {
-        //   console.log("URL", url)
-        //   $.ajax({
-        //     url: url,
-        //     type: "GET",
-        //     data: {
-        //       vendor: vendor,
-        //       orderNumber: orderNumber,
-        //       date: date,
-        //       evendoSKU: evendoSKU,
-        //     },
-        //     dataType: "json",
-        //     success: function (response) {
-        //       console.log(response);
-        //       // Handle the response date
-        //       //var responses = JSON.parse(response.html);
-        //       if (response.statusCode == 400) {
-        //         //$("#agebandOpenModal").modal('show');
-        //         $("#msgNotAvailable").text(response.message);
-        //       } else {
-        //         var ref = response.bookRef;
-        //         var payNowAmount = response.totalPay;
-        //         var country = response.country;
-        //         var language = response.language;
-        //         var totalTravellers = response.totalTravellers;
-        //         var bookDateTime = response.bookingDateTime;
-        //         $(".totalTravellerDiv").html(
-        //           `<h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${totalTravellers} Person</h6>`
-        //         );
-        //         $(".timeData").html(`<span class="icon-20 fill-color">
-        //                                  <img src="{{asset('assets/img/time.svg')}}" >
-        //                              </span>
-        //                              <h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${bookDateTime}</h6>`);
-        //         $(".payment").show();
-        //         initialize(ref, payNowAmount, country, language);
-        //         checkStatus();
-        //         if (response.checkoutSummaryDate) {
-        //           $(".timeData").show();
-        //           $(".timeData").html(`<span class="icon-20 fill-color">
-        //                                  <img src="{{asset('assets/img/time.svg')}}" >
-        //                              </span>
-        //                              <h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${response.checkoutSummaryDate}</h6>`);
-        //         }
-        //       }
-        //     },
-        //     error: function (xhr) {
-        //       console.log(xhr);
-        //       // Handle any error that occurs during the AJAX request
-        //       //$("#agebandOpenModal").modal('show');
-        //       console.log(xhr.responseText);
-        //     },
-        //   });
-        // }
+          return `${day}-${month}-${year}`;
+        }
+        if (url == "Viator/initial-first-step") {
+          $.ajax({
+            url: `https://evendo.com/us/en/${url}`,
+            // type: "GET",
+            method: "GET",
+            headers: {
+              "Authorization": "Basic ZXZlbmRvOjc5eDc4eTMzMCE=",
+              "accept": "application/json",
+              "Access-Control-Allow-Origin":"*"
+            },
+            data: {
+              vendor: vendor,
+              productId: productId,
+              date: date,
+              evendoSKU: evendoSKU,
+            },
+            dataType: "json",
+            success: function (response) {
+              // Handle the response date
+              //var responses = JSON.parse(response.html);
+              if (response.statusCode == 400) {
+                $("#agebandOpenModal").modal("show");
+                $("#msgNotAvailable").text(response.message);
+              } else {
+                console.log(5555)
+                $(".stepOne").html(response.html);
+                if (response.checkoutSummaryDate) {
+                  $(".timeData").show();
+                  $(".timeData").html(`<span class="icon-20 fill-color">
+                                         <img src="{{asset('assets/img/time.svg')}}" >
+                                     </span>
+                                     <h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${response.checkoutSummaryDate}</h6>`);
+                }
+                window.scrollTo(0, 0);
+              }
+            },
+            error: function (xhr) {
+              console.log(xhr);
+              // Handle any error that occurs during the AJAX request
+              // $("#agebandOpenModal").modal("show");
+            },
+          });
+        } else {
+          console.log("URL", url)
+          $.ajax({
+            url: url,
+            type: "GET",
+            data: {
+              vendor: vendor,
+              orderNumber: orderNumber,
+              date: date,
+              evendoSKU: evendoSKU,
+            },
+            dataType: "json",
+            success: function (response) {
+              console.log(response);
+              // Handle the response date
+              //var responses = JSON.parse(response.html);
+              if (response.statusCode == 400) {
+                //$("#agebandOpenModal").modal('show');
+                $("#msgNotAvailable").text(response.message);
+              } else {
+                var ref = response.bookRef;
+                var payNowAmount = response.totalPay;
+                var country = response.country;
+                var language = response.language;
+                var totalTravellers = response.totalTravellers;
+                var bookDateTime = response.bookingDateTime;
+                $(".totalTravellerDiv").html(
+                  `<h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${totalTravellers} Person</h6>`
+                );
+                $(".timeData").html(`<span class="icon-20 fill-color">
+                                         <img src="{{asset('assets/img/time.svg')}}" >
+                                     </span>
+                                     <h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${bookDateTime}</h6>`);
+                $(".payment").show();
+                initialize(ref, payNowAmount, country, language);
+                checkStatus();
+                if (response.checkoutSummaryDate) {
+                  $(".timeData").show();
+                  $(".timeData").html(`<span class="icon-20 fill-color">
+                                         <img src="{{asset('assets/img/time.svg')}}" >
+                                     </span>
+                                     <h6 class="product-block__description text-md font-light mb-0 pb-0 order_time">${response.checkoutSummaryDate}</h6>`);
+                }
+              }
+            },
+            error: function (xhr) {
+              console.log(xhr);
+              // Handle any error that occurs during the AJAX request
+              //$("#agebandOpenModal").modal('show');
+              console.log(xhr.responseText);
+            },
+          });
+        }
       });
     </script>
     <script>
