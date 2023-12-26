@@ -13702,15 +13702,15 @@
           return `${day}-${month}-${year}`;
         }
         if (url == "Viator/initial-first-step") {
-
           $.ajax({
-            url: `https://piinuts.com/us/en/${url}`,
+            url: `https://evendo.com/us/en/${url}`,
             type: "GET",
-            headers: {
-              "Authorization": "Basic ZXZlbmRvOjc5eDc4eTMzMCE=",
-              "accept": "application/json",
-              "Access-Control-Allow-Origin":"*"
-            },
+            // headers: {
+            //   "method": "GET",
+            //   // "Authorization": "Basic ZXZlbmRvOjc5eDc4eTMzMCE=",
+            //   "accept": "application/json",
+            //   "Access-Control-Allow-Origin":"*"
+            // },
             data: {
               vendor: vendor,
               productId: productId,
