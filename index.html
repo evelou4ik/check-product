@@ -13716,23 +13716,23 @@
         }
         if (url == "Viator/initial-first-step") {
           $.ajax({
-            url: `https://evendo.com/us/en/${url}`,
+            "url": `https://evendo.com/us/en/${url}`,
             // type: "GET",
-            method: "GET",
-            timeout: 0,
-            headers: {
+            "method": "GET",
+            "timeout": 0,
+            "headers": {
               "Authorization": "Basic ZXZlbmRvOjc5eDc4eTMzMCE=",
               "accept": "application/json",
               "Cookie": "PHPSESSID=eqe9n2iml0h5ii814sk4v24b1u"
               // "Access-Control-Allow-Origin":"*"
             },
-            data: {
-              vendor: vendor,
-              productId: productId,
-              date: date,
-              evendoSKU: evendoSKU,
+            "data": {
+              "vendor": "vendor",
+              "productId": "productId",
+              "date": "date",
+              "evendoSKU": "evendoSKU",
             },
-            dataType: "json",
+            "dataType": "json",
             success: function (response) {
               // Handle the response date
               //var responses = JSON.parse(response.html);
