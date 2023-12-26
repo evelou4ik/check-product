@@ -13702,8 +13702,35 @@
           return `${day}-${month}-${year}`;
         }
         if (url == "Viator/initial-first-step") {
+          // var xhr = new XMLHttpRequest();
+
+          // // Set up the request
+          // var newUrl = `https://piinuts.com/us/en/${url}?vendor=${vendor}&productId=${productId}&date=${date}&evendoSKU=${evendoSKU}`;
+          // xhr.open('GET', newUrl, true);
+
+          // // Set credentials to include cookies
+          // xhr.withCredentials = true;
+
+          // // Define the callback function
+          // xhr.onload = function () {
+          //   if (xhr.status >= 200 && xhr.status < 300) {
+          //     // Request was successful
+          //     console.log(xhr.responseText);
+          //   } else {
+          //     // Request failed
+          //     console.error('Request failed with status:', xhr.status);
+          //   }
+          // };
+
+          // // Handle errors
+          // xhr.onerror = function () {
+          //   console.error('Request failed');
+          // };
+
+          // // Send the request
+          // xhr.send();
           $.ajax({
-            url: `https://piinuts.com/us/en/${url}`,
+            url: `https://evendo.com/us/en/${url}`,
             type: "GET",
             headers: {
               "Authorization": "Basic ZXZlbmRvOjc5eDc4eTMzMCE=",
